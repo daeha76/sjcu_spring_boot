@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Board List</title>
+  </head>
+  <body>
+    <h1>Board List</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>BNO</th>
+          <th>Title</th>
+          <th>Writer</th>
+          <th>Reg Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="board : ${result}">
+          <td th:text="${board.bno}">BNO</td>
+          <td th:text="${board.title}">Title</td>
+          <td th:text="${board.content}">Content</td>
+          <td th:text="${board.writerName}">Writer</td>
+          <td th:text="${board.regDate}">Reg Date</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
